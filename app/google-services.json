@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "431304595436",
+    "firebase_url": "https://updfinal.firebaseio.com",
+    "project_id": "updfinal",
+    "storage_bucket": "updfinal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431304595436:android:03b3b6fd94b47bf94012c9",
+        "android_client_info": {
+          "package_name": "com.chinaappsremover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431304595436-hcjb3m8egd4dkvfb2jl2kcglebkmeul5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdWtsdS48bBLBqy6L7O9QwL9ghAfqwRNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431304595436-hcjb3m8egd4dkvfb2jl2kcglebkmeul5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

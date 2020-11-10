@@ -9,7 +9,6 @@ import android.util.Log;
 
 import com.chinaappsremover.wrapper.AppInfo;
 
-import java.io.File;
 import java.util.List;
 
 public class DataBaseHelper extends SQLiteOpenHelper {

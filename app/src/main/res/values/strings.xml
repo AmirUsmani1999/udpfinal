@@ -1,17 +1,45 @@
 <resources>
-    <string name="app_name">Remove China Apps</string>
-    <string name="app_found_count">&lt;b&gt;%1$d China Apps&lt;/b&gt; Found</string>
+    <string name="app_name">UPD</string>
+    <string name="enter_your_password">Enter Password</string>
     <string name="awesome_txt">You are Awesome, No China App Found in your system.</string>
     <string name="clickscantext">Click on \"&lt;b&gt;Scan Now\"&lt;/b&gt; to find installed China Apps in your system.</string>
     <string name="congratulation">Congratulation</string>
-    <string name="contact_us">Contact us</string>
-    <string name="contact_us_url">https://www.onetouchapplabs.com/</string>
+    <string name="contact_us">Help India</string>
+    <string name="contact_us_url">https://forms.gle/QGEKN7KsQaNu4vi46</string>
     <string name="privacy_policy">Privacy Policy</string>
-    <string name="privacy_policy_url">https://www.onetouchapplabs.com/privacy-policy</string>
-    <string name="rate_us">Rate us</string>
+    <string name="privacy_policy_url">https://www.oneto/privacy-policy</string>
+    <string name="rate_us">Our Website</string>
     <string name="rescan">Re-scan Now</string>
     <string name="scannow">Scan now</string>
     <string name="share">Share</string>
     <string name="sharethisapp">Share This App</string>
-  <string name="font_poppins_regular">Poppins-Regular</string>
+    <string name="font_poppins_regular">Poppins-Regular</string>
+    <string name="app_found_count"></string>
+    <string name="txt_message">No Text Available</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="ma_scan_btn">Scan Now</string>
+    <string name="ma_editText_hint">Enter a Bar Code</string>
+    <string name="ma_search_btn">Search</string>
+    <string name="sc_img_desc">country of origin</string>
+    <string name="sc_origin_txt">Country of origin :</string>
+    <string name="card_icon">card icon</string>
+    <string name="bar_code_card_title">Bar Code Scanner</string>
+    <string name="bar_code_card_desc">Scan Bar Code of Products</string>
+    <string name="brands_card_title">Indian Brands</string>
+    <string name="brands_card_desc">Indian Brands to choose</string>
+    <string name="products_card_title">Buy Indian Products</string>
+    <string name="products_card_desc">Indian Products to buy</string>
+    <string name="app_card_title">Chinese Apps Alternatives</string>
+    <string name="app_card_desc">Alternatives of Chinese apps</string>
+
+    <string-array name="brands_categories">
+        <item>Electronics</item>
+        <item>Groceries</item>
+        <item>Health and fitness</item>
+        <item>Smartphones</item>
+        <item>Earphones</item>
+        <item>Acessories</item>
+        <item>Sports</item>
+        <item>Fashion</item>
+    </string-array>
 </resources>

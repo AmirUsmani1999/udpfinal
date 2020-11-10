@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "444984852374",
+    "firebase_url": "https://udp12-d600a.firebaseio.com",
+    "project_id": "udp12-d600a",
+    "storage_bucket": "udp12-d600a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444984852374:android:650a8bb5eb58a470b427b7",
+        "android_client_info": {
+          "package_name": "com.e.upd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444984852374-s84fl9g2ovo6uhekqvd9779lrggnb21i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBixFpl97n7gkKFFPbtPwmNCqw271sCvDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444984852374-s84fl9g2ovo6uhekqvd9779lrggnb21i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

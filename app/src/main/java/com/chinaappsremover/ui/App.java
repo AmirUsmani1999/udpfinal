@@ -1,5 +1,6 @@
 package com.chinaappsremover.ui;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -61,7 +62,7 @@ import java.util.List;
 
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity implements OnItemClickListener {
+public class App extends AppCompatActivity implements OnItemClickListener {
 
     private static final int RC_APP_UPDATE = 201;
 
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 if (installState.installStatus() == InstallStatus.DOWNLOADED) {
                     popupSnackbarForCompleteUpdate();
                 } else if (installState.installStatus() != InstallStatus.INSTALLED) {
-                    Log.i("MainActivity", "InstallStateUpdatedListener: state: " + installState.installStatus());
+                    Log.i("App", "InstallStateUpdatedListener: state: " + installState.installStatus());
                 } else if (mAppUpdateManager != null) {
                     mAppUpdateManager.unregisterListener(installStateUpdatedListener);
                 }
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_app);
 
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
@@ -155,14 +156,14 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 public void onSuccess(AppUpdateInfo appUpdateInfo) {
                     if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
                         try {
-                            mAppUpdateManager.startUpdateFlowForResult(appUpdateInfo, AppUpdateType.FLEXIBLE, MainActivity.this, RC_APP_UPDATE);
+                            mAppUpdateManager.startUpdateFlowForResult(appUpdateInfo, AppUpdateType.FLEXIBLE, App.this, RC_APP_UPDATE);
                         } catch (IntentSender.SendIntentException e) {
                             e.printStackTrace();
                         }
                     } else if (appUpdateInfo.installStatus() == InstallStatus.DOWNLOADED) {
                         popupSnackbarForCompleteUpdate();
                     } else {
-                        Log.e("MainActivity", "checkForAppUpdateAvailability: something else");
+                        Log.e("App", "checkForAppUpdateAvailability: something else");
                     }
                 }
             });
@@ -251,7 +252,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         protected List<AppInfo> doInBackground(Void... voidArr) {
             DataBaseHelper dbHelper = AppController.getDbHelper();
             if (NetworkUtils.hasNetworkConnection() && Preference.shouldRefreshData()) {
-                Log.d("MainActivity", "Refreshing database from the network...");
+                Log.d("App", "Refreshing database from the network...");
                 publishProgress(NetworkRefreshState.ONGOING);
                 ChinaAppsDataDownloader dataDownloader = ChinaAppsDataDownloader.getInstance(getApplicationContext());
                 try {
@@ -263,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                     Response response = dataDownloader.fetch(false);
                     List<AppInfo> appInfoList = ChinaAppsDataParser.parse(response);
                     if (appInfoList != null && dbHelper.refreshAppInfos(appInfoList)) {
-                        Log.d("MainActivity", "Refreshed database from the network.");
+                        Log.d("App", "Refreshed database from the network.");
                         Preference.updateLastSyncMills();
                         Preference.setDbInitialized();
                         publishProgress(NetworkRefreshState.COMPLETED);
@@ -275,13 +276,13 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 }
             } else {
                 if (Preference.isDbInitialized()) {
-                    Log.d("MainActivity", "DB not initialized, initializing database from local json...");
+                    Log.d("App", "DB not initialized, initializing database from local json...");
                     try {
                         InputStream stream = getApplicationContext().getAssets().open("china_apps.json");
                         List<AppInfo> appInfoList = ChinaAppsDataParser.parse(stream);
                         if (appInfoList != null && dbHelper.refreshAppInfos(appInfoList)) {
                             Preference.setDbInitialized();
-                            Log.d("MainActivity", "Initialized database from local json.");
+                            Log.d("App", "Initialized database from local json.");
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -310,6 +311,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
             }
         }
 
+        @SuppressLint("StringFormatInvalid")
         protected void onPostExecute(List<AppInfo> list) {
             super.onPostExecute(list);
             progressBar.setVisibility(View.GONE);
@@ -365,7 +367,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         try {
             startActivity(intent);
         } catch (ActivityNotFoundException unused) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/apps/details?id=" + getPackageName())));
         }
     }
 

@@ -23,7 +23,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 Splash splash = Splash.this;
-                splash.startActivity(new Intent(splash, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                splash.startActivity(new Intent(splash, App.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 Splash.this.finish();
             }
         }, 2500);
