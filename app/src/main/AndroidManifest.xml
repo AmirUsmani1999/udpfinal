@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.chinaappsremover.ocr"></activity>
-        <activity android:name=".OCR" />
+        <activity android:name=".barcode" />
+        <activity android:name=".ScanCodeActivity"/>
+        <activity android:name=".ScanResultActivity"/>
+        <activity android:name=".HomeActivity"/>
         <activity android:name="com.chinaappsremover.Method">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

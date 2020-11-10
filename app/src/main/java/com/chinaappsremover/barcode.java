@@ -18,8 +18,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 import java.util.Objects;
 
-
-
 public class barcode extends AppCompatActivity {
     Button scanBtn, searchBtn;
     EditText barCodeInput;
@@ -28,8 +26,6 @@ public class barcode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode);
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         scanBtn = findViewById(R.id.scan_btn);
         barCodeInput = findViewById(R.id.bar_code_input);
         searchBtn = findViewById(R.id.search_btn);

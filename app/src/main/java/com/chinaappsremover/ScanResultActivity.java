@@ -24,8 +24,6 @@ public class ScanResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_result);
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         countryImg = findViewById(R.id.country_img);
         countryText = findViewById(R.id.country_text);
         countryName = findViewById(R.id.country_name);
