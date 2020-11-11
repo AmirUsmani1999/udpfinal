@@ -147,7 +147,7 @@ public class Login extends AppCompatActivity {
                     BigInteger temp = new BigInteger(a);
                     hash = temp.multiply(hash);
                     Cipher = String.valueOf(hash);
-                    reff = FirebaseDatabase.getInstance().getReference().child("Users").child(phone);
+                    reff = FirebaseDatabase.getInstance().getReference().child("users").child(phone);
                     reff.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
