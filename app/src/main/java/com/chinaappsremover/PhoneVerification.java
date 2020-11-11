@@ -130,7 +130,7 @@ public class PhoneVerification extends AppCompatActivity implements View.OnClick
                                         editor1.putString("Phone", phone);
                                         editor1.putString("NewPhone", phone);
                                         editor1.apply();
-                                        Firebase reference = new Firebase("Your firebase link");
+                                        Firebase reference = new Firebase("https://updfinal.firebaseio.com/users");
                                         reference.child(phone).child("Username").setValue(encryptedUsername);
                                         reference.child(phone).child("Password").setValue(Cipher);
                                         reference.child(phone).child("Name").setValue(name);
@@ -194,8 +194,8 @@ public class PhoneVerification extends AppCompatActivity implements View.OnClick
         }, 1, TimeUnit.MINUTES);
     }
 
-    public StringBuilder encryptUsername(String uname) {
+    public String encryptUsername(String uname) {
         // Encryption logic
-        return null;
+        return uname;
     }
 }

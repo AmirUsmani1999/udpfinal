@@ -82,7 +82,7 @@ public class Login extends AppCompatActivity {
         //new_phone = preferences.getString("NewPhone","Null");
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
-
+        FirebaseApp.initializeApp(this);
         register = findViewById(R.id.register);
         Phone = findViewById(R.id.phone);
         Password = findViewById(R.id.password);
@@ -159,7 +159,7 @@ public class Login extends AppCompatActivity {
                                         editor1.putString("Status", "Yes");
                                         editor1.putString("Phone", phone);
                                         editor1.apply();
-                                        startActivity(new Intent(Login.this, MainActivity.class));
+                                        startActivity(new Intent(Login.this, Method.class));
                                         finishAffinity();
                                     }
 

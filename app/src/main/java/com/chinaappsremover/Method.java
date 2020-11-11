@@ -58,7 +58,7 @@ public class Method extends AppCompatActivity {
         startActivity(intent);
     }
     public void openNewActivity2() {
-        Intent intent = new Intent(Method.this, barcode.class);
+        Intent intent = new Intent(Method.this, HomeActivity.class);
         startActivity(intent);
     }
     @Override

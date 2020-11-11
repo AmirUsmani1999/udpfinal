@@ -70,6 +70,7 @@
                         android:textStyle="bold"
                         app:custom_font="@string/font_poppins_regular" />
 
+
                     <com.chinaappsremover.utils.uihelper.CustomFontButton
                         android:id="@+id/scan_now"
                         android:layout_width="match_parent"
@@ -85,6 +86,7 @@
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
+
                 </RelativeLayout>
 
                 <RelativeLayout

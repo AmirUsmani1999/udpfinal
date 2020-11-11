@@ -16,8 +16,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         barCodeCard = findViewById(R.id.bar_code_card);
         brandsCard = findViewById(R.id.brands_card);
         productsCard = findViewById(R.id.products_card);

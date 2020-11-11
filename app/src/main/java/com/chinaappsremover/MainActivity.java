@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Firebase.setAndroidContext(this);
         pd = new ProgressDialog(MainActivity.this);
         initFireBaseCallbacks();
-        url = "your_firebase_url.json";
+        url = "https://updfinal.firebaseio.com/users.json";
     }
 
     void initFireBaseCallbacks() {

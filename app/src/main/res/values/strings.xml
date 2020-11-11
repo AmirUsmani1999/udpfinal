@@ -31,6 +31,7 @@
     <string name="products_card_desc">Indian Products to buy</string>
     <string name="app_card_title">Chinese Apps Alternatives</string>
     <string name="app_card_desc">Alternatives of Chinese apps</string>
+    <string name="scan_apps">Scan Apps</string>
 
     <string-array name="brands_categories">
         <item>Electronics</item>
